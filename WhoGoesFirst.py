@@ -28,7 +28,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(689, 679)
+        MainWindow.resize(727, 608)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.gridLayout_2 = QtGui.QGridLayout(self.centralwidget)
@@ -285,15 +285,52 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.tab, _fromUtf8(""))
         self.tab_2 = QtGui.QWidget()
         self.tab_2.setObjectName(_fromUtf8("tab_2"))
+        self.widget = QtGui.QWidget(self.tab_2)
+        self.widget.setGeometry(QtCore.QRect(40, 50, 720, 141))
+        self.widget.setObjectName(_fromUtf8("widget"))
+        self.verticalLayout_15 = QtGui.QVBoxLayout(self.widget)
+        self.verticalLayout_15.setObjectName(_fromUtf8("verticalLayout_15"))
+        self.horizontalLayout_6 = QtGui.QHBoxLayout()
+        self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
+        self.label_14 = QtGui.QLabel(self.widget)
+        self.label_14.setObjectName(_fromUtf8("label_14"))
+        self.horizontalLayout_6.addWidget(self.label_14)
+        self.label_15 = QtGui.QLabel(self.widget)
+        self.label_15.setOpenExternalLinks(True)
+        self.label_15.setObjectName(_fromUtf8("label_15"))
+        self.horizontalLayout_6.addWidget(self.label_15)
+        spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem)
+        self.verticalLayout_15.addLayout(self.horizontalLayout_6)
+        self.horizontalLayout_7 = QtGui.QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(_fromUtf8("horizontalLayout_7"))
+        self.label_16 = QtGui.QLabel(self.widget)
+        self.label_16.setObjectName(_fromUtf8("label_16"))
+        self.horizontalLayout_7.addWidget(self.label_16)
+        self.label_17 = QtGui.QLabel(self.widget)
+        self.label_17.setOpenExternalLinks(True)
+        self.label_17.setObjectName(_fromUtf8("label_17"))
+        self.horizontalLayout_7.addWidget(self.label_17)
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_7.addItem(spacerItem1)
+        self.verticalLayout_15.addLayout(self.horizontalLayout_7)
+        self.horizontalLayout_8 = QtGui.QHBoxLayout()
+        self.horizontalLayout_8.setObjectName(_fromUtf8("horizontalLayout_8"))
+        self.label_18 = QtGui.QLabel(self.widget)
+        self.label_18.setObjectName(_fromUtf8("label_18"))
+        self.horizontalLayout_8.addWidget(self.label_18)
+        spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_8.addItem(spacerItem2)
+        self.verticalLayout_15.addLayout(self.horizontalLayout_8)
         self.tabWidget.addTab(self.tab_2, _fromUtf8(""))
-        self.gridLayout_2.addWidget(self.tabWidget, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.tabWidget, 0, 1, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtGui.QStatusBar(MainWindow)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -314,7 +351,17 @@ class Ui_MainWindow(object):
         self.label_6.setText(_translate("MainWindow", "щит".encode('cp1251'), None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "калькулятор первого хода".encode('cp1251'), None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "о проекте".encode('cp1251'), None))
+        self.label_14.setText(_translate("MainWindow", "Контакт автора".encode('cp1251'), None))
+        self.label_17.setText(_translate("MainWindow",
+                                         "<html><head/><body><p><a href=\"https://github.com/opsupwow/App-for-HOMM5\"><span style=\" text-decoration: underline; color:#0000ff;\">https://github.com/opsupwow/App-for-HOMM5</span></a></p></body></html>",
+                                         None))
+        self.label_15.setText(_translate("MainWindow",
+                                         "<html><head/><body><p><a href=\"https://vk.com/id258871341\"><span style=\" text-decoration: underline; color:#0000ff;\">https://vk.com/id258871341</span></a></p></body></html>",
+                                         None))
 
+        self.label_16.setText(_translate("MainWindow", "Проект на гитхаб".encode('cp1251'), None))
+        self.label_18.setText(
+            _translate("MainWindow", "Автор выражает благодарность игорю за помощь в процессе разработки".encode('cp1251'), None))
 
 
 
