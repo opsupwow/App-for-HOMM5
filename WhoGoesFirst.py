@@ -446,22 +446,24 @@ class StartQT4(QtGui.QMainWindow):
         for monster in my_army:
             all_monster_info = self.monsters[monster]
             real_initiative = float(all_monster_info['initiative'])
+            art_bonus = 1
             for item in self.artifact_comboBoxes:
                 current_art = item.currentText()
                 all_art_info = self.artifacts[current_art]
-                real_initiative *= float(all_art_info['all_my'])
+                art_bonus += float(all_art_info['all_my']) - 1
                 if (bool(int(all_monster_info['shooter']))):
-                    real_initiative *= float(all_art_info['shooters'])
+                    art_bonus += float(all_art_info['shooters']) - 1
                 if (bool(int(all_monster_info['flyer']))):
-                    real_initiative *= float(all_art_info['flyers'])
+                    art_bonus += float(all_art_info['flyers']) - 1
                 if (bool(int(all_monster_info['caster']))):
-                    real_initiative *= float(all_art_info['casters'])
+                    art_bonus += float(all_art_info['casters']) - 1
                 if (not(bool(int(all_monster_info['shooter'])) | bool(int(all_monster_info['caster'])) | bool(int(all_monster_info['flyer']))) ):
-                    real_initiative *= float(all_art_info['mele'])
+                    art_bonus += float(all_art_info['mele']) - 1
                 if (bool(int(all_monster_info['big']))):
-                    real_initiative *= float(all_art_info['big'])
+                    art_bonus += float(all_art_info['big']) - 1
                 else :
-                    real_initiative *= float(all_art_info['small'])
+                    art_bonus += float(all_art_info['small']) - 1
+            real_initiative *= art_bonus
             competitors += ({'name':monster, 'ini':real_initiative, 'whos': 'our',  'ans' : 0.0},)
 
         for monster in his_army:
