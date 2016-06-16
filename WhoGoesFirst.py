@@ -419,7 +419,7 @@ class StartQT4(QtGui.QMainWindow):
             monster_name = item.currentText()
             if(monster_name != ''):
                 if(self.monsters.get(monster_name) == None ):
-                    self.msg.showMessage("Существа " + monster_name + " нет в базе.")
+                    self.msg.showMessage(monster_name + _translate("MainWindow",(" - cущества нет в базе.").encode('cp1251') , None))
                     no_unknown_monsters = False
 
                 my_army += (monster_name,)
@@ -430,14 +430,14 @@ class StartQT4(QtGui.QMainWindow):
             if (monster_name != ''):
                 if (self.monsters.get(monster_name) == None):
                     self.msg = QtGui.QErrorMessage()
-                    self.msg.showMessage("Существа " + monster_name + " нет в базе.")
+                    self.msg.showMessage(monster_name + _translate("MainWindow",(" - cущества нет в базе.").encode('cp1251') , None))
                     no_unknown_monsters = False
                 his_army += (monster_name,)
                 no_monsters = False
 
         if(no_monsters):
             self.msg = QtGui.QErrorMessage()
-            self.msg.showMessage("В армиях должно быть хотя бы одно существо")
+            self.msg.showMessage(_translate("MainWindow","В армиях должно быть хотя бы одно существо".encode('cp1251') , None))
             return;
         if(not no_unknown_monsters):
             return;
